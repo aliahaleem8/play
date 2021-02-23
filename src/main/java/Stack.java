@@ -52,6 +52,7 @@ public class Stack {
 
     for (int i = 0; i<size() ; i++){
         p.add(this.arr[i]);
+        System.out.println(p.toString());
     }
         System.out.println(p.toString());
     while (true){
