@@ -1,0 +1,15 @@
+
+U	java:S1064"9Replace this use of System.out or System.err by a logger.(§ÿ¦¶8‚»šÏü.
+W
+java:S2209,"5Change this instance-reference to a static reference.(¡ÔÓËúÿÿÿÿ8‚»šÏü.
+0
+java:S1220""Move this file to a named package.
+R
+java:S2209."5Change this instance-reference to a static reference.(†ßì±8‚»šÏü.
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ8‚»šÏü.
+R
+java:S2209-"5Change this instance-reference to a static reference.(ğï¶×8‚»šÏü.
+Z	java:S1060"9Replace this use of System.out or System.err by a logger.(•Ğİİşÿÿÿÿ8‚»šÏü.
+R
+java:S2209+"5Change this instance-reference to a static reference.(¶²§8‚»šÏü.
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(ç‘›·şÿÿÿÿ8‚»šÏü.

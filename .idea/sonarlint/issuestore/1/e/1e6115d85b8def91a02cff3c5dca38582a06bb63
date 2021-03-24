@@ -1,0 +1,22 @@
+
+X	java:S125"<This block of commented-out lines of code should be removed.(Ü°™á8ˆóˆˆü.
+E
+java:S5411
+"*Use the primitive boolean expression here.(Ü´ Ëşÿÿÿÿ
+R
+java:S2589
+"7Remove this expression which always evaluates to "true"(Ü´ Ëşÿÿÿÿ
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(Å²Åßøÿÿÿÿ8£ì–ˆü.
+U	java:S1067"9Replace this use of System.out or System.err by a logger.(‘¬®8ğ²Õìû.
+X	java:S1256"<This block of commented-out lines of code should be removed.(¢ä¾õ8á ˆü.
+]	java:S125/"<This block of commented-out lines of code should be removed.(‰Íè»ÿÿÿÿÿ8‹ŒÒìû.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÆŞì¯8ßÃƒˆü.
+0
+java:S1220""Move this file to a named package.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Œ¬…Åşÿÿÿÿ8¤Êú‡ü.
+V
+java:S1854"9Remove this useless assignment to local variable "found".(·”íŒ8øı‡ü.
+B
+java:S2116"%Use "Arrays.toString(array)" instead.(ÆŞì¯8½Œ„ˆü.
+X	java:S1254"<This block of commented-out lines of code should be removed.(ÿÈ¤ş8Êº˜ˆü.

@@ -1,0 +1,10 @@
+
+0
+java:S1220""Move this file to a named package.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ş«‰ÿÿÿÿÿ8¥ êøü.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(âÏ„«8¥ êøü.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‘ßìñıÿÿÿÿ8¥ êøü.
+G
+java:S3457"%String contains no format specifiers.(ş«‰ÿÿÿÿÿ8¥ êøü.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(°Ô¬ÿøÿÿÿÿ8¥ êøü.
+]	java:S125"<This block of commented-out lines of code should be removed.(á‹‘ıÿÿÿÿ8ìººÿü.

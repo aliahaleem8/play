@@ -1,0 +1,8 @@
+
+n
+java:S2095!"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ð¢Å–þÿÿÿÿ8«ž¯üü.
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´â­‘ÿÿÿÿÿ8«ž¯üü.
+¥
+java:S1598"‚This file "Points.java" should be located in "Solution" directory, not in "/Users/alia.haleem/IdeaProjects/Pokemon/src/main/java".(´â­‘ÿÿÿÿÿ8«ž¯üü.
+Q
+java:S1128"4Remove this unused import 'java.lang.reflect.Array'.(‡¡É˜8«ž¯üü.
