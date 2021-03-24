@@ -1,49 +1,124 @@
-import static java.lang.Math.min;
+import javax.swing.plaf.synth.SynthTextAreaUI;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
-public class AppleMatrix {
+public class GoogleMatrix {
+
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        //int[][] matrix = new int[4][4];
+        int[][] m = { { 1, 2, 3, 4 },
+                     { 2, 1, 4, 3 },
+                    { 3, 4, 1, 2 },
+                    { 4, 3, 2, 1 } };
 
-        //is valid
-        int[][] matrix3 = { { 3, 2, 1, 7 },
-                            { 4, 3, 2, 1 },
-                            { 5, 4, 3, 2 },
-                            { 7, 5, 4, 3 } };
-        //is invalid
+        int[][] m2 = { { 2, 2, 2, 2 },
+                { 2, 3, 2, 3 },
+                { 2, 2, 2, 3 },
+                { 2, 2, 2, 2 } };
 
-//        int[][] matrix3 ={ { 3, 2, 1, 7 },
-//            { 9, 11, 5, 4 },
-//            { 6, 0, 13, 17 },
-//            { 7, 21, 14, 15 } };
+        int[][] m3 = { { 2, 2, 2, 2 },
+                { 2, 3, 2, 3 },
+                { 2, 2, 2, 3 },
+                { 2, 2, 2, 2 } };
 
+        int count = 3; // scanner.nextInt();
 
-        for (int i = 0; i < matrix3.length; i++)
-        {
-            // length returns number of rows
-            for (int j = 0; j < matrix3[i].length; j++)
-            {       int t = matrix3[i][j];
-                    int x = 0;
+        for (int a = 0; a< count ; a++) {
+            System.out.print("Case #" + count + ": ");
+            generateMatrixVestigiumTrace(m);
+        }
 
-                     while (((i+x) < matrix3.length) && ((j+x) < matrix3[0].length)) {
-                     //    System.out.println("min: "+min(matrix3.length, matrix3[0].length));
+    }
 
-                     //   System.out.println("t: "+t + " == " + matrix3[i+x][j+x] + "?");
-                        if (t!=(matrix3[i+x][j+x]))
-                            System.out.println(false); // return false;
-                      //  else System.out.println("matched: [" + i+x + "] ") ;
-                         x++;
+    private static void generateMatrixVestigiumTrace(int[][] m) {
+        // int[][] m = getMatrixFromInput();
+        int n = m.length;
+        int sum_r = 0;
+        int sum_c = 0;
+        int diag_sum = 0;
+        for (int i = 0; i < n; i++) {
+            HashMap<Integer, Integer> hc = new HashMap<Integer, Integer>();
+            for (int j = 0; j < n; j++) {
+                if (!hc.containsValue(m[i][j]))
+                    hc.put(j,m[i][j]);
+                else sum_c++;
 
-                    }
-                // here length returns # of columns corresponding to current row
-            //    System.out.print("col " + j + "  ");
-              //  System.out.print(" " + matrix3[i][j] + "  ");
+                if (i == j)
+                    diag_sum = diag_sum + m[i][j];
+                HashMap<Integer,Integer> hm = new HashMap<Integer, Integer>();
+                if (!hm.containsValue(m[i][j])) {
+                    hm.put(i, m[i][j]);
+                }
+                else
+                    sum_r++;
 
             }
-
-
         }
-        System.out.println(true); //return true;
+        System.out.println("Diagonal sum: " + diag_sum + ", Repeats row: " + sum_r + ", Repeats col: " + sum_c);
+        System.out.println("Case #1: " + diag_sum + " " + sum_r + " " + sum_c);
+    }
+
+    private static int[][] getMatrixFromInput() {
+
+      //  int count =  scanner.nextInt();
+
+      //  for (int a = 0; a< count ; a++) {
+            int n = scanner.nextInt();
+            int[][] arr = new int[n][n];
+            for (int i = 0; i < n; i++) {
+                String[] arrRowItems = scanner.nextLine().split(" ");
+                //  scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+                System.out.println(arrRowItems.toString())  ;
+                for (int j = 0; j < n; j++) {
+                    int arrItem = Integer.parseInt(arrRowItems[j]);
+                    System.out.println(arrItem);
+                    arr[i][j] = arrItem;
+                }
+            }
+
+       // }
+
+        scanner.close();
+        return arr;
     }
 }
+
+/*
+
+
+
+Input
+
+
+
+3
+4
+1 2 3 4
+2 1 4 3
+3 4 1 2
+4 3 2 1
+4
+2 2 2 2
+2 3 2 3
+2 2 2 3
+2 2 2 2
+3
+2 1 3
+1 3 2
+1 2 3
+
+  Output
+Case #1: 4 0 0
+Case #2: 9 4 4
+Case #3: 8 0 2
+
+
+ */

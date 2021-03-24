@@ -1,3 +1,9 @@
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.PriorityQueue;
 
 public class Stack {
@@ -47,19 +53,37 @@ public class Stack {
         return index;
     }
 
+    public void sortArr(){
+        Instant start = Instant.now();
+        Arrays.sort(this.arr);
+        for (int i = 0; i < size(); i++)
+        {
+            System.out.println(this.arr[i]);
+        }
+        Instant end = Instant.now();
+        Duration timeElapsed = Duration.between(start, end);
+        System.out.println("\nTime taken array Sort: "+ timeElapsed.toMillis() +" milliseconds");
+
+
+    }
     public void printSort(){
+        Instant start = Instant.now();
     PriorityQueue<Integer> p = new PriorityQueue<Integer>();
 
     for (int i = 0; i<size() ; i++){
         p.add(this.arr[i]);
     }
-        System.out.println(p.toString());
     while (true){
         Integer i = p.poll();
-        System.out.println(i);
-
+        System.out.print(i);
         if (i == null) break;
     }
+
+
+        Instant end = Instant.now();
+        Duration timeElapsed = Duration.between(start, end);
+        System.out.println("\nTime taken priority queue: "+ timeElapsed.toMillis() +" milliseconds");
+
 
     }
 }
