@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class AInitialize {
+public class AInitializeArrays {
 
     public static void main(String[] args) throws Exception {
         initializeArray();
@@ -55,10 +55,10 @@ public class AInitialize {
         return array;
     }
 
-    public static char[] initChar(){
+    public char[] initChar(){
         char[] array = new char[] {'a', 'b', 'c'};
-      //  char[] copy = ArrayUtils.clone(array); 
-
+      //  char[] copy = ArrayUtils.clone(array);
+        return array;
     }
 
 

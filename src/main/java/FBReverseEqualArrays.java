@@ -15,13 +15,11 @@ output = true
 After reversing the subarray of B from indices 1 to 3, array B will equal array A.
  */
 
-import java.io.*;
-import java.util.*;
 // Add any extra import statements you may need here
 
 
 
-public class FBReverseEqual {
+public class FBReverseEqualArrays {
 
  //   class Main {
 
@@ -30,7 +28,7 @@ public class FBReverseEqual {
 
         boolean areTheyEqual(int[] array_a, int[] array_b) {
             // Write your code here
-            
+
 
             return true;
 
@@ -83,6 +81,6 @@ public class FBReverseEqual {
         }
 
         public static void main(String[] args) {
-            new FBReverseEqual().run();
+            new FBReverseEqualArrays().run();
         }
     }

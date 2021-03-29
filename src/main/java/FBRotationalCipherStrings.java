@@ -1,8 +1,7 @@
-import java.util.*;
 // Add any extra import statements you may need here
 
 
-class Main {
+class FBRotationalCipherStrings {
 
     // Add any helper functions you may need here
 
@@ -139,6 +138,6 @@ Need Hints?
     }
 
     public static void main(String[] args) {
-        new Main().run();
+        new FBRotationalCipherStrings().run();
     }
 }

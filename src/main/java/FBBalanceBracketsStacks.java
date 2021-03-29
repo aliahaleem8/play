@@ -1,5 +1,3 @@
-
-import java.util.*;
 // Add any extra import statements you may need here
 /*
 
@@ -31,13 +29,14 @@ s = )
 output: false
  */
 
-public class FBBalanceBrackets {
+public class FBBalanceBracketsStacks {
 
     // Add any helper functions you may need here
 
 
     boolean isBalanced(String s) {
         // Write your code here
+        return true;
 
     }
 
@@ -91,6 +90,6 @@ public class FBBalanceBrackets {
     }
 
     public static void main(String[] args) {
-        new FBBalanceBrackets().run();
+        new FBBalanceBracketsStacks().run();
     }
 }

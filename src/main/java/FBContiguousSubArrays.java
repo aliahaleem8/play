@@ -1,5 +1,3 @@
-import java.io.*;
-import java.util.*;
 // Add any extra import statements you may need here
 
 /*
@@ -25,7 +23,7 @@ For index 3 - [6], [6, 2], [1, 6], [4, 1, 6], [3, 4, 1, 6]
 For index 4 - [2]
 So, the answer for the above input is [1, 3, 1, 5, 1]
  */
-class Main2 {
+class FBContiguousSubArrays {
 
     // Add any helper functions you may need here
 
@@ -99,6 +97,6 @@ class Main2 {
 
     }
     public static void main(String[] args) {
-        new Main2().run();
+        new FBContiguousSubArrays().run();
     }
 }

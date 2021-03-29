@@ -2,7 +2,7 @@ public class StackClient {
 
     public static void main(String[] args) throws Exception {
 
-        Stack stack = new Stack(5);
+        MyStack stack = new MyStack(5);
         stack.push(10);
        // stack.push(4);
         stack.push(1);

@@ -1,18 +1,15 @@
 import java.time.Duration;
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.PriorityQueue;
 
-public class Stack {
+public class MyStack {
 
     private int arr[];
     private int size;
     private int index = 0;
 
-    public Stack(int size) {
+    public MyStack(int size) {
         this.size = size;
         arr = new int[size];
     }

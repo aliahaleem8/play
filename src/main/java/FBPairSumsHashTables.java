@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 // Add any extra import statements you may need here
 /*
@@ -27,7 +26,7 @@ output = 4
 There's one valid pair 1+5, and three different valid pairs 3+3 (the 3rd and 4th elements, 3rd and 5th elements, and 4th and 5th elements).
  */
 
-class PairSums {
+class FBPairSumsHashTables {
 
     // Add any helper functions you may need here
 
@@ -46,8 +45,10 @@ class PairSums {
         for (int i = 0; i< a.length; i++){
             if (hm.containsKey(k-a[i])){
                 System.out.println(a[i] + ", " + (k-a[i]));
+                //count= count + hm.get(k-a[i]);
                 count++;
                 hm.put(k-a[i], hm.get(k-a[i])-1);
+
             }
             else if (hm.containsKey(a[i])){
                 hm.put(a[i], hm.get(a[i])+1);
@@ -85,14 +86,14 @@ class PairSums {
     }
 
     public void run() {
-        int k_1 = 6;
-        int[] arr_1 = {1, 2, 3, 4, 3};
-        int expected_1 = 2;
-        int output_1 = numberOfWays(arr_1, k_1);
-        check(expected_1, output_1);
+//        int k_1 = 6;
+//        int[] arr_1 = {1, 2, 3, 4, 3};
+//        int expected_1 = 2;
+//        int output_1 = numberOfWays(arr_1, k_1);
+//        check(expected_1, output_1);
 
 
-        // fails: There's one valid pair 1+5, and three different valid pairs 3+3 (the 3rd and 4th elements, 3rd and 5th elements, and 4th and 5th elements).
+        // !! gets different 3 locations fails: There's one valid pair 1+5, and three different valid pairs 3+3 (the 3rd and 4th elements, 3rd and 5th elements, and 4th and 5th elements).
         int k_2 = 6;
         int[] arr_2 = {1, 5, 3, 3, 3};
         int expected_2 = 4;
@@ -100,8 +101,10 @@ class PairSums {
         check(expected_2, output_2);
 
         // Add your own test cases here
+//
+//        int arr[] = { 1, 5, 7, -1, 5 };
+//        check(3, numberOfWays(arr, 6));
 
-        //apple
 
 //        int k_3 = 10;
 //        int[] arr_3 = {3, 3, 5, 6, 4, 8, 7, 7};
@@ -111,6 +114,6 @@ class PairSums {
 
     }
     public static void main(String[] args) {
-        new PairSums().run();
+        new FBPairSumsHashTables().run();
     }
 }
