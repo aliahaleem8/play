@@ -1,6 +1,3 @@
-
-import java.io.*;
-        import java.util.*;
 // Add any extra import statements you may need here
 /*
 Minimizing Permutations
@@ -20,14 +17,14 @@ Select (3, 2, 1) and reverse it: P = (1, 2, 3).
 output = 2
  */
 
-public class FBMinimizePerumtationsGraphs {
+public class FB_12_MinimizingPermutations_Graphs {
 
     // Add any helper functions you may need here
 
 
     int minOperations(int[] arr) {
         // Write your code here
-        return 1;
+        return 0;
     }
 
 
@@ -81,6 +78,6 @@ public class FBMinimizePerumtationsGraphs {
 
     }
     public static void main(String[] args) {
-        new FBMinimizePerumtationsGraphs().run();
+        new FB_12_MinimizingPermutations_Graphs().run();
     }
 }

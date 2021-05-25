@@ -1,16 +1,30 @@
 
+/*
+Revenue Milestones
+We keep track of the revenue Facebook makes every day, and we want to know on what days Facebook hits certain revenue milestones. Given an array of the revenue on each day, and an array of milestones Facebook wants to reach, return an array containing the days on which Facebook reached every milestone.
+Signature
+int[] getMilestoneDays(int[] revenues, int[] milestones)
+Input
+revenues is a length-N array representing how much revenue FB made on each day (from day 1 to day N). milestones is a length-K array of total revenue milestones.
+Output
+Return a length-K array where K_i is the day on which FB first had milestones[i] total revenue. If the milestone is never met, return -1.
+Example
+revenues = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+milestones = [100, 200, 500]
+output = [4, 6, 10]
+Explanation
+On days 4, 5, and 6, FB has total revenue of $100, $150, and $210 respectively. Day 6 is the first time that FB has >= $200 of total revenue.
+ */
 
-    import java.io.*;
-        import java.util.*;
 // Add any extra import statements you may need here
 
 
-public class FBQueueRemoval {
+class FB_7A_Search_RevenueMileston {
 
     // Add any helper functions you may need here
 
 
-    int[] findPositions(int[] arr, int x) {
+    int[] getMilestoneDays(int[] revenues, int[] milestones) {
         // Write your code here
         return null;
     }
@@ -64,20 +78,17 @@ public class FBQueueRemoval {
         }
         System.out.print("]");
     }
-
     public void run() {
-        int n_1 = 6;
-        int x_1 = 5;
-        int[] arr_1 = {1, 2, 2, 3, 4, 5};
-        int[] expected_1 = {5, 6, 4, 1, 2 };
-        int[] output_1 = findPositions(arr_1, x_1);
+        int revenues_1[] = {100, 200, 300, 400, 500};
+        int milestones_1[] = {300, 800, 1000, 1400};
+        int expected_1[] = {2, 4, 4, 5};
+        int[] output_1 = getMilestoneDays(revenues_1, milestones_1);
         check(expected_1, output_1);
 
-        int n_2 = 13;
-        int x_2 = 4;
-        int[] arr_2 = {2, 4, 2, 4, 3, 1, 2, 2, 3, 4, 3, 4, 4};
-        int[] expected_2 = {2, 5, 10, 13};
-        int[] output_2 = findPositions(arr_2, x_2);
+        int revenues_2[] = {700, 800, 600, 400, 600, 700};
+        int milestones_2[] = {3100, 2200, 800, 2100, 1000};
+        int expected_2[] = {5, 4, 2, 3, 2};
+        int[] output_2 = getMilestoneDays(revenues_2, milestones_2);
         check(expected_2, output_2);
 
         // Add your own test cases here
@@ -85,6 +96,6 @@ public class FBQueueRemoval {
     }
 
     public static void main(String[] args) {
-        new FBQueueRemoval().run();
+        new FB_7A_Search_RevenueMileston().run();
     }
 }

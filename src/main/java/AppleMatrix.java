@@ -1,5 +1,5 @@
 import static java.lang.Math.min;
-
+//diagonally all elements match down and right
 public class AppleMatrix {
 
     public static void main(String[] args) {
@@ -27,19 +27,11 @@ public class AppleMatrix {
                     int x = 0;
 
                      while (((i+x) < matrix3.length) && ((j+x) < matrix3[0].length)) {
-                     //    System.out.println("min: "+min(matrix3.length, matrix3[0].length));
-
-                     //   System.out.println("t: "+t + " == " + matrix3[i+x][j+x] + "?");
                         if (t!=(matrix3[i+x][j+x]))
                             System.out.println(false); // return false;
-                      //  else System.out.println("matched: [" + i+x + "] ") ;
                          x++;
 
                     }
-                // here length returns # of columns corresponding to current row
-            //    System.out.print("col " + j + "  ");
-              //  System.out.print(" " + matrix3[i][j] + "  ");
-
             }
 
 

@@ -4,7 +4,7 @@
 
 import java.util.Stack;
 
-public class AInitializeStacks {
+public class A_Initialize_Stacks {
 
 
     // Main Method

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class AInitializeArrays {
+public class A_Initialize_Arrays {
 
     public static void main(String[] args) throws Exception {
         initializeArray();

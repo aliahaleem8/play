@@ -23,14 +23,32 @@ For index 3 - [6], [6, 2], [1, 6], [4, 1, 6], [3, 4, 1, 6]
 For index 4 - [2]
 So, the answer for the above input is [1, 3, 1, 5, 1]
  */
-class FBContiguousSubArrays {
+class FB_0B_1C_ContiguousSubArrays {
 
     // Add any helper functions you may need here
 
 
-    int[] countSubarrays(int[] arr) {
-        // Write your code here
-        return null;
+    int[] countSubarrays(int[] a) {
+        int[] ans = new int[a.length];
+        for (int i = 0; i< a.length; i++){
+            {  int count = 1; //iterate from current to left and count elements until you either find greater value or reach end
+                for (int j = 0; j <i ; j++){
+                    if (a[i]>a[i-j-1]){
+                        count++;
+                    }
+                    else break;
+                }
+                //iterate from current to right and count elements until you either find greater value or reach end
+                for (int k = i+1; k <=a.length-1 ; k++){
+                    if (a[i]>a[k]){
+                        count++;
+                    }
+                    else break;
+                }
+                ans[i]=count;
+            }
+        }
+        return ans;
     }
 
 
@@ -97,6 +115,6 @@ class FBContiguousSubArrays {
 
     }
     public static void main(String[] args) {
-        new FBContiguousSubArrays().run();
+        new FB_0B_1C_ContiguousSubArrays().run();
     }
 }

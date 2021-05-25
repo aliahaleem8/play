@@ -1,5 +1,40 @@
 // Add any extra import statements you may need here
+/*
+Rotational Cipher
+One simple way to encrypt a string is to "rotate" every alphanumeric character by a certain amount. Rotating a character means replacing it with another character that is a certain number of steps away in normal alphabetic or numerical order.
+For example, if the string "Zebra-493?" is rotated 3 places, the resulting string is "Cheud-726?". Every alphabetic character is replaced with the character 3 letters higher (wrapping around from Z to A), and every numeric character replaced with the character 3 digits higher (wrapping around from 9 to 0). Note that the non-alphanumeric characters remain unchanged.
+Given a string and a rotation factor, return an encrypted string.
+Signature
+string rotationalCipher(string input, int rotationFactor)
+Input
+1 <= |input| <= 1,000,000
+0 <= rotationFactor <= 1,000,000
+Output
+Return the result of rotating input a number of times equal to rotationFactor.
+Example 1
+input = Zebra-493?
+rotationFactor = 3
+output = Cheud-726?
+Example 2
+input = abcdefghijklmNOPQRSTUVWXYZ0123456789
+rotationFactor = 39
+output = nopqrstuvwxyzABCDEFGHIJKLM9012345678
+Need Hints
 
+Complexity 1
+We need to process every character, even if only to check whether or not it's alphanumeric, so no solution can be faster than O(n) where, n is the number of characters in the input string. Within each character processing, however, consider how you might transform it optimally.
+Complexity 2
+Since every character can be handled independently, we just need an O(1) operation for transforming a character into its ciphered version. In particular, we don’t want to use O(rotationFactor) steps for each character.
+If your solution involves iterating through rotations one at a time (e.g. if a rotationFactor of 6 causes your code to consider transforming A to B to C to D to E to F to G without skipping directly from A to G), then you should consider how you might cut out those steps in between. If reducing the time complexity means you now use a meaningful amount of additional space, then you should consider how you might avoid using that space.
+
+
+Edge cases 1
+Does your code correctly handle all non-alphanumeric characters? The list of non-alphanumeric characters is harder to define, so it’s much easier to check if a character is alphanumeric rather than the other way around.
+Edge cases 2
+Does your code work correctly if rotationFactor is greater than 25? How about a rotationFactor of 0?
+
+
+ */
 
 class FBRotationalCipherStrings {
 

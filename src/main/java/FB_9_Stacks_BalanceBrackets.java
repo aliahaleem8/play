@@ -29,7 +29,7 @@ s = )
 output: false
  */
 
-public class FBBalanceBracketsStacks {
+public class FB_9_Stacks_BalanceBrackets {
 
     // Add any helper functions you may need here
 
@@ -39,16 +39,6 @@ public class FBBalanceBracketsStacks {
         return true;
 
     }
-
-
-
-
-
-
-
-
-
-
 
 
     // These are the tests we use to determine if the solution is correct.
@@ -90,6 +80,6 @@ public class FBBalanceBracketsStacks {
     }
 
     public static void main(String[] args) {
-        new FBBalanceBracketsStacks().run();
+        new FB_9_Stacks_BalanceBrackets().run();
     }
 }

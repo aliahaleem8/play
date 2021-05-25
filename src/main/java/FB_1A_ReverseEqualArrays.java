@@ -19,7 +19,7 @@ After reversing the subarray of B from indices 1 to 3, array B will equal array 
 
 
 
-public class FBReverseEqualArrays {
+public class FB_1A_ReverseEqualArrays {
 
  //   class Main {
 
@@ -81,6 +81,6 @@ public class FBReverseEqualArrays {
         }
 
         public static void main(String[] args) {
-            new FBReverseEqualArrays().run();
+            new FB_1A_ReverseEqualArrays().run();
         }
     }
