@@ -186,6 +186,43 @@ class FB_0C_10_PairSums_HashTables {
         test_case_number++;
     }
 
+    /*
+
+    Interface ICar
+abstract class Car implements ICar
+class Nissan extends Car
+class Versa extends Nissan
+
+Icar --> Car
+
+Versa ex Nissan ex Car
+
+Which of the following statements are valid?
+  Car c = new Car()    F
+  ICar c = new Car()  F
+  ICar c = new Nissan()  T
+  Car c = new Nissan()  T*
+  Nissan c = new Car() f
+  Nissan c = new Versa()   t
+  Versa c = new Nissan()  f
+
+    Given a target number, and an array of numbers, return all pairs of indeces that sum to the target number
+
+Example:
+Arguments:  nums = [2, 2, 2, 3, 4, 5, 6, 11, 15, 7], target = 9,
+
+Because nums[0] + nums[5] = 2 + 7 = 9,
+Because nums[1] + nums[4] = 3 + 6 = 9,
+Because nums[2] + nums[3] = 4 + 5 = 9,
+
+return [
+	[0, 5],
+	[1, 4],
+	[2, 3]
+       ]
+
+     */
+
     void printInteger(int n) {
         System.out.print("[" + n + "]");
     }

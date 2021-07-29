@@ -8,12 +8,48 @@ import java.io.*;
 public class FB_2C_MinLenSubStrings_Strings {
 
     // Add any helper functions you may need here
-
+//
+//[dcbefebce]
+//            [fd]
+//
+//            1. d  (any of fd belongs? & !end of s1? &!end of s2) yes --> min = currentIndex (0)
+//    2. c (any of remaining f belongs? ) no
+//    3.  b
+//    4. e ef
+//    5. f ... yes  --> max = currentIndex (5)
 
     int minLengthSubstring(String s, String t) {
         // Write your code here
 
-        return 0;
+        int nS = 0;
+        int min = -1;
+        int max = -1;
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i<t.length(); i++){
+            if (map.containsKey(t.charAt(i))) {
+                map.put(t.charAt(i), map.get(t.charAt(i)+1));
+            }
+            else  map.put(t.charAt(i), 1);
+        }
+
+        while( (!map.isEmpty()) && nS<s.length()){
+            if (map.containsKey(s.charAt(nS))){
+                if (min<0) {
+                    min = nS;
+                } else {
+                    max = nS;
+                }
+                if(map.get(s.charAt(nS))>1)
+                    map.put(t.charAt(nS), map.get(t.charAt(nS)-1));
+                else map.remove(s.charAt(nS));
+            }
+            nS++;
+        }
+
+        if (max >0)
+         return ((max-min)+1);
+        else return -1; //not found
     }
 
 
@@ -49,11 +85,11 @@ public class FB_2C_MinLenSubStrings_Strings {
         System.out.print("[" + n + "]");
     }
     public void run() throws IOException {
-        String s_1 = "dcbefebce";
-        String t_1 = "fd";
-        int expected_1 = 5;
-        int output_1 = minLengthSubstring(s_1, t_1);
-        check(expected_1, output_1);
+//        String s_1 = "dcbefebce";
+//        String t_1 = "fd";
+//        int expected_1 = 5;
+//        int output_1 = minLengthSubstring(s_1, t_1);
+//        check(expected_1, output_1);
 
         String s_2 = "bfbeadbcbcbfeaaeefcddcccbbbfaaafdbebedddf";
         String t_2 = "cbccfafebccdccebdd";

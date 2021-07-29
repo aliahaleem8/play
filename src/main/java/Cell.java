@@ -1,7 +1,7 @@
 //import java.util.ArrayList;
 //import java.util.List;
 //
-//public class Cell {
+public class Cell {
 //
 //        // METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
 //        public List<Integer> cellCompete(int[] states, int days)
@@ -42,4 +42,4 @@
 //        // [x, 0  / [x , 1  == > 0 x 1 / 0 x 1 == left edge house
 //        //  0, x ] / 1, x ] ==>  0 x 0 / 1 x 0 == right edge house
 //
-//}
+}
