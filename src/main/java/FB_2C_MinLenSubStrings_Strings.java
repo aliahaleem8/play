@@ -28,11 +28,12 @@ public class FB_2C_MinLenSubStrings_Strings {
 
         for (int i = 0; i<t.length(); i++){
             if (map.containsKey(t.charAt(i))) {
-                map.put(t.charAt(i), map.get(t.charAt(i)+1));
+                map.put(t.charAt(i), map.get(t.charAt(i))+1);
+              //  System.out.println(t.charAt(i) + ", " + map.get(t.charAt(i)));
             }
             else  map.put(t.charAt(i), 1);
         }
-
+        int newMin=s.length()+1;
         while( (!map.isEmpty()) && nS<s.length()){
             if (map.containsKey(s.charAt(nS))){
                 if (min<0) {
@@ -41,18 +42,29 @@ public class FB_2C_MinLenSubStrings_Strings {
                     max = nS;
                 }
                 if(map.get(s.charAt(nS))>1)
-                    map.put(t.charAt(nS), map.get(t.charAt(nS)-1));
-                else map.remove(s.charAt(nS));
+                    map.put(t.charAt(nS), map.get(t.charAt(nS))-1);
+                else if (map.containsKey(s.charAt(nS))) {
+                    map.remove(s.charAt(nS));
+                }
+                //else do nothing.. have too many characters of this letter
             }
+            else if (min>0)
+                newMin = minLengthSubstring(s.substring(nS), t);
+
             nS++;
         }
 
+        min = ((max-min)+1);
         if (max >0)
-         return ((max-min)+1);
+            return getmin(newMin, min);
         else return -1; //not found
     }
 
+     int getmin(int n, int m){
 
+        if (n>m) return m;
+        else return n;
+    }
 
 
 
@@ -92,10 +104,12 @@ public class FB_2C_MinLenSubStrings_Strings {
 //        check(expected_1, output_1);
 
         String s_2 = "bfbeadbcbcbfeaaeefcddcccbbbfaaafdbebedddf";
-        String t_2 = "cbccfafebccdccebdd";
+        String t_2 = "cbccfafebccdccebdd"; //c 7, b 3, f 2, a 1, e 2, d 3
         int expected_2 = -1;
         int output_2 = minLengthSubstring(s_2, t_2);
         check(expected_2, output_2);
+
+//        bfbeadbccfea b  b  a  e e  cdd ccc //  c 1, b 0, f 0, a 0, e 0, d 0
 
         // Add your own test cases here
 
